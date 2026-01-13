@@ -135,7 +135,7 @@
             <h2 class="text-lg kufi-font text-red-800 font-bold flex items-center gap-2">
                 <span>🇪🇬</span> لوحة التحكم
             </h2>
-            <p class="text-sm text-gray-600">تم ضبط التواريخ (16 نوفمبر - 1 يناير) مع استبعاد أيام الانتخابات.</p>
+            <p class="text-sm text-gray-600">تم إضافة صفحة ثانية للمقدمة وترحيل الريلز للنهاية.</p>
         </div>
         <button onclick="window.print()" class="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-6 rounded shadow-lg transition transform hover:scale-105 cairo-font flex items-center gap-2 border-2 border-green-900">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -146,6 +146,94 @@
     </div>
 
     <div class="h-24 no-print"></div>
+
+    <!-- PAGE 0-A: Initiative Intro Page (Part 1) -->
+    <div class="page hover-scale">
+        <div class="flag-strip"></div>
+        
+        <!-- Center Header -->
+        <div class="text-center mt-12 mb-8">
+            <div class="flex justify-center mb-6 opacity-90">
+                 <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10L10 80H90L50 10Z" fill="#C09300" stroke="black" stroke-width="2"/>
+                    <circle cx="50" cy="30" r="10" fill="#CE1126" opacity="0.8"/>
+                    <path d="M20 80H80V85H20V80Z" fill="black"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl kufi-font pharaonic-title inline-block rounded shadow-md text-black mb-6">
+                مبادرة (مصر… حضارة وانتماء)
+            </h1>
+            <p class="text-2xl font-bold text-red-800 mt-2 kufi-font border-b-2 border-dotted border-red-800 inline-block pb-2">
+                معًا لبناء جيل واعٍ… أصيل… ينتمي لوطنه ويحافظ على قيمه وأخلاقه
+            </p>
+        </div>
+
+        <!-- Body Content Part 1 -->
+        <div class="flex-grow px-10 text-xl font-medium">
+            
+            <!-- Objectives -->
+            <div class="mb-8 pr-6 bg-white/60 p-6 rounded border-r-8 border-amber-500 shadow-sm">
+                <p class="font-bold text-black mb-4 text-2xl">تطلق <span class="text-red-800">إدارة التخطيط الاستراتيجي والمشروعات</span> مبادرة تربوية كبرى تهدف إلى:</p>
+                <ul class="list-none space-y-4">
+                    <li class="flex items-center gap-3"><span class="text-green-700 text-2xl">✔</span> تعزيز الهوية الوطنية لدى الطلاب</li>
+                    <li class="flex items-center gap-3"><span class="text-green-700 text-2xl">✔</span> ترسيخ القيم الأخلاقية والسلوكية الإيجابية</li>
+                    <li class="flex items-center gap-3"><span class="text-green-700 text-2xl">✔</span> إبراز نماذج تاريخ مصر المشرّفة في البطولة والنجاح والعلم</li>
+                    <li class="flex items-center gap-3"><span class="text-green-700 text-2xl">✔</span> نشر ثقافة الانتماء والمحافظة على المال العام والممتلكات</li>
+                    <li class="flex items-center gap-3"><span class="text-green-700 text-2xl">✔</span> دعم الإبداع والفنون والتعبير البنّاء لدى الطلاب</li>
+                </ul>
+            </div>
+
+            <!-- Slogan -->
+            <div class="text-center my-8 py-6 border-y-4 double border-black bg-amber-100 shadow-inner">
+                <h2 class="text-2xl kufi-font text-red-800 mb-2">🎯 شعار المبادرة</h2>
+                <p class="text-4xl font-bold text-black kufi-font">قوة التاريخ… أمان الحاضر… أمل المستقبل</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 0-B: Initiative Intro Page (Part 2) -->
+    <div class="page hover-scale">
+        <div class="flag-strip"></div>
+        
+        <div class="flex-grow px-10 pt-16 text-xl font-medium flex flex-col justify-center">
+            
+            <!-- Video Section -->
+            <div class="mb-10 border-4 border-amber-600 rounded-lg overflow-hidden shadow-2xl bg-black mx-auto w-4/5">
+                <div class="relative w-full pb-[56.25%]"> <!-- 16:9 Aspect Ratio -->
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/EKAHMAxGC0o" 
+                        title="فيديو تعريفي للمبادرة" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Activities -->
+            <div class="mb-10 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <h3 class="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3 border-b-2 border-blue-900 w-fit pb-2">
+                    <span class="text-3xl">📚</span> ماذا تقدّم المبادرة لطلابنا؟
+                </h3>
+                <div class="grid grid-cols-1 gap-y-4 text-lg font-bold text-gray-800 leading-loose">
+                    <div class="flex items-start gap-3"><span>▪</span> أنشطة ميدانية ومشروعات تربط الماضي بالحاضر</div>
+                    <div class="flex items-start gap-3"><span>▪</span> عروض فنية وإبداعية تحت عنوان "قيمي في وطني"</div>
+                    <div class="flex items-start gap-3"><span>▪</span> حملات توعية وغرس للسلوك الأخلاقي داخل المدرسة</div>
+                    <div class="flex items-start gap-3"><span>▪</span> مسابقات بحثية ومشروعات رقمية حول القيم والانتماء</div>
+                    <div class="flex items-start gap-3"><span>▪</span> تكريم الطلاب المتميزين في القيم والخلق والإنجاز</div>
+                    <div class="flex items-start gap-3"><span>▪</span> ورش عمل “كيف أحافظ على وطني؟”</div>
+                    <div class="flex items-start gap-3"><span>▪</span> إذاعات مدرسية يومية عن النماذج الوطنية المشرفة</div>
+                </div>
+            </div>
+
+            <!-- Goal Footer -->
+            <div class="mt-auto bg-black text-white p-6 rounded-lg border-2 border-amber-500 shadow-xl text-center mb-8">
+                <h3 class="text-2xl text-amber-400 font-bold mb-3 kufi-font">🌟 هدفنا</h3>
+                <p class="leading-relaxed text-lg">صناعة جيل معتز بتاريخه، محب لوطنه، قادر على صناعة مستقبل أفضل، يحمل قيم الأمانة، الاحترام، الانضباط، التعاون، الرحمة، الشجاعة، والإبداع.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- PAGE 1: The Formal Report -->
     <div class="page hover-scale">
@@ -207,7 +295,7 @@
         </div>
     </div>
 
-    <!-- PAGE 2 -->
+    <!-- PAGE 2: Activities (Visuals) -->
     <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
@@ -286,26 +374,6 @@
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (3) <span class="text-gold-600">⚜</span>
         </h3>
 
-        <!-- Activity 11 (Video) -->
-        <div class="activity-card">
-            <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">دوري المكاتب التنفيذية (المركز 3)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/22</span></div>
-            </div>
-            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
-                تنميةً للمهارات القيادية والمشاركة الفعالة ضمن مبادرة "مصر.. حضارة وانتماء"، فازت المدرسة بالمركز الثالث في دوري المكاتب التنفيذية بإدارة شرق كفر الشيخ.
-            </p>
-            <div class="fb-embed-container bg-amber-50">
-                 <a href="https://www.facebook.com/share/v/1ASrj8Uyc7/" target="_blank" class="text-red-700 underline font-bold text-xl hover:text-red-900 transition flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    اضغط للمشاهدة: فوز المكاتب التنفيذية (Facebook Video)
-                 </a>
-            </div>
-        </div>
-
         <!-- Activity 10 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
@@ -319,14 +387,6 @@
                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0WNPmGS697vfrwc5NzsMW5j7YcqcNP7Gord8EAnVhPT83Pfvc5WophtiFaCE44cpcl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
-    </div>
-
-    <!-- PAGE 5 -->
-    <div class="page hover-scale">
-        <div class="flag-strip"></div>
-        <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
-            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (4) <span class="text-gold-600">⚜</span>
-        </h3>
 
         <!-- Activity 9 -->
         <div class="activity-card">
@@ -341,6 +401,14 @@
                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0CddkgY8FiguYr1zCu9xixixpf7CZKasjnPJqgQ3KS2UjjK8kx7ZVQmJzSsRW6aDGl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
+    </div>
+
+    <!-- PAGE 5 -->
+    <div class="page hover-scale">
+        <div class="flag-strip"></div>
+        <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
+            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (4) <span class="text-gold-600">⚜</span>
+        </h3>
 
         <!-- Activity 8 -->
         <div class="activity-card">
@@ -355,14 +423,6 @@
                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02XWFF4ewBLRTDyGcWMKsfMo3y88oQor99oraFcvCgfmT3wSNGt3w6oYA59QRc6iQ7l%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
-    </div>
-
-    <!-- PAGE 6 -->
-    <div class="page hover-scale">
-        <div class="flag-strip"></div>
-        <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
-            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (5) <span class="text-gold-600">⚜</span>
-        </h3>
 
         <!-- Activity 7 -->
         <div class="activity-card">
@@ -377,33 +437,13 @@
                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02CU2JxiT2Rx8SCxhPKLPeC4BPgGS4S7czrNaisamaKLXew9ZQnauqAak87KffCrxBl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
-
-        <!-- Activity 6 (Reel) -->
-        <div class="activity-card">
-            <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">النشيد الوطني (الهوية الوطنية)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/02</span></div>
-            </div>
-            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
-                تأكيداً على الهوية الوطنية والانتماء لمصر ضمن فعاليات مبادرة "مصر.. حضارة وانتماء"، استقبل طلاب 1/1 إعدادي لجنة الجودة بترديد النشيد الوطني بحماس.
-            </p>
-            <div class="fb-embed-container bg-amber-50">
-                 <a href="https://www.facebook.com/share/r/1826dcj8bq/" target="_blank" class="text-red-700 underline font-bold text-xl hover:text-red-900 transition flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    اضغط للمشاهدة: النشيد الوطني (Facebook Reel)
-                 </a>
-            </div>
-        </div>
     </div>
 
-    <!-- PAGE 7 -->
+    <!-- PAGE 6 -->
     <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
-            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (6) <span class="text-gold-600">⚜</span>
+            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (5) <span class="text-gold-600">⚜</span>
         </h3>
 
         <!-- Activity 5 -->
@@ -435,11 +475,11 @@
         </div>
     </div>
 
-    <!-- PAGE 8 -->
+    <!-- PAGE 7 -->
     <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
-            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (7) <span class="text-gold-600">⚜</span>
+            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (6) <span class="text-gold-600">⚜</span>
         </h3>
 
         <!-- Activity 3 -->
@@ -471,11 +511,11 @@
         </div>
     </div>
 
-    <!-- PAGE 9 -->
+    <!-- PAGE 8 -->
     <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
-            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (8) <span class="text-gold-600">⚜</span>
+            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (7) <span class="text-gold-600">⚜</span>
         </h3>
 
         <!-- Activity 1 (Oldest) -->
@@ -489,6 +529,54 @@
             </p>
             <div class="fb-embed-container">
                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid033RGTgSQgLkr616cMqz1uuvzwkZk2BAq3MQMBYmV1rJPNjrJ9djE34Vj27qRdWMofl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </div>
+
+        <!-- Activity 11 (Video moved to end) -->
+        <div class="activity-card">
+            <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">دوري المكاتب التنفيذية (المركز 3)</span></div>
+                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/22</span></div>
+            </div>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تنميةً للمهارات القيادية والمشاركة الفعالة ضمن مبادرة "مصر.. حضارة وانتماء"، فازت المدرسة بالمركز الثالث في دوري المكاتب التنفيذية بإدارة شرق كفر الشيخ.
+            </p>
+            <div class="fb-embed-container bg-amber-50">
+                 <a href="https://www.facebook.com/share/v/1ASrj8Uyc7/" target="_blank" class="text-red-700 underline font-bold text-xl hover:text-red-900 transition flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    اضغط للمشاهدة: فوز المكاتب التنفيذية (Facebook Video)
+                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 9 -->
+    <div class="page hover-scale">
+        <div class="flag-strip"></div>
+        <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
+            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (8) <span class="text-gold-600">⚜</span>
+        </h3>
+
+        <!-- Activity 6 (Reel moved to end) -->
+        <div class="activity-card">
+            <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">النشيد الوطني (الهوية الوطنية)</span></div>
+                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/02</span></div>
+            </div>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تأكيداً على الهوية الوطنية والانتماء لمصر ضمن فعاليات مبادرة "مصر.. حضارة وانتماء"، استقبل طلاب 1/1 إعدادي لجنة الجودة بترديد النشيد الوطني بحماس.
+            </p>
+            <div class="fb-embed-container bg-amber-50">
+                 <a href="https://www.facebook.com/share/r/1826dcj8bq/" target="_blank" class="text-red-700 underline font-bold text-xl hover:text-red-900 transition flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    اضغط للمشاهدة: النشيد الوطني (Facebook Reel)
+                 </a>
             </div>
         </div>
 
