@@ -14,10 +14,9 @@
             font-family: 'Cairo', sans-serif;
         }
         .kufi-font {
-            font-family: 'Reem Kufi', sans-serif; /* الخط الكوفي للعناوين */
+            font-family: 'Reem Kufi', sans-serif;
         }
         
-        /* Egyptian Flag Colors */
         :root {
             --egypt-red: #CE1126;
             --egypt-white: #FFFFFF;
@@ -26,27 +25,26 @@
             --papyrus-bg: #fdfbf7;
         }
 
-        /* A4 Paper Styling */
         .page {
             width: 210mm;
             height: 297mm;
             padding: 20mm;
             margin: 10mm auto;
             border: 1px solid #D3D3D3;
-            /* Pharaonic Border Effect */
             border-bottom: 4px solid var(--egypt-black);
             border-radius: 2px;
-            background-color: var(--papyrus-bg); /* Papyrus hint */
+            background-color: var(--papyrus-bg);
             background-image: radial-gradient(var(--egypt-gold) 0.5px, transparent 0.5px);
-            background-size: 20px 20px; /* Subtle pattern */
+            background-size: 20px 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             position: relative;
             page-break-after: always;
             box-sizing: border-box;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Flag Header Strip */
         .flag-strip {
             position: absolute;
             top: 0;
@@ -57,15 +55,8 @@
             border-bottom: 2px solid var(--egypt-gold);
         }
 
-        /* Flex Layout for Activity Pages */
-        .page-flex {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Editable Highlights */
         [contenteditable="true"]:hover {
-            background-color: #fff8e1; /* Light gold hover */
+            background-color: #fff8e1;
             cursor: text;
             outline: 1px dashed var(--egypt-gold);
         }
@@ -75,14 +66,9 @@
             border-radius: 4px;
         }
 
-        /* Print Specifics */
         @media print {
-            body {
-                background: white;
-            }
-            .no-print {
-                display: none !important;
-            }
+            body { background: white; }
+            .no-print { display: none !important; }
             .page {
                 margin: 0;
                 border: initial;
@@ -97,7 +83,6 @@
             }
         }
 
-        /* Activity Card Styling */
         .activity-card {
             border: 2px solid var(--egypt-black);
             padding: 10px;
@@ -110,95 +95,47 @@
             position: relative;
         }
         
-        /* Decorative Corners for Cards */
         .activity-card::after {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 20px;
-            height: 20px;
-            border-top: 3px solid var(--egypt-red);
-            border-left: 3px solid var(--egypt-red);
+            content: ''; position: absolute; top: 2px; left: 2px; width: 20px; height: 20px;
+            border-top: 3px solid var(--egypt-red); border-left: 3px solid var(--egypt-red);
         }
         .activity-card::before {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            right: 2px;
-            width: 20px;
-            height: 20px;
-            border-bottom: 3px solid var(--egypt-black);
-            border-right: 3px solid var(--egypt-black);
+            content: ''; position: absolute; bottom: 2px; right: 2px; width: 20px; height: 20px;
+            border-bottom: 3px solid var(--egypt-black); border-right: 3px solid var(--egypt-black);
         }
-        
-        .activity-card:last-of-type {
-            margin-bottom: 0;
-        }
+        .activity-card:last-of-type { margin-bottom: 0; }
 
-        .hover-scale {
-            transition: transform 0.2s;
-        }
-        .hover-scale:hover {
-            transform: scale(1.01);
-        }
+        .hover-scale { transition: transform 0.2s; }
+        .hover-scale:hover { transform: scale(1.01); }
         
-        h1, h2, h3, .thin-title {
-            font-weight: 700 !important; 
-            color: var(--egypt-black);
-        }
-
-        /* Custom text colors */
+        h1, h2, h3, .thin-title { font-weight: 700 !important; color: var(--egypt-black); }
         .text-egypt-red { color: var(--egypt-red); }
-        .text-egypt-gold { color: var(--egypt-gold); }
         
-        /* Iframe Container */
         .fb-embed-container {
-            width: 100%;
-            border: 1px solid #ddd;
-            background: #f9f9f9;
-            margin-top: 5px;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
+            width: 100%; border: 1px solid #ddd; background: #f9f9f9; margin-top: 5px;
+            flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;
         }
-        
         .fb-embed-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
+            width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;
         }
         
-        /* Pharaonic Title Border */
         .pharaonic-title {
-            border: 3px double var(--egypt-black);
-            background-color: #fff;
-            padding: 10px 30px;
-            position: relative;
+            border: 3px double var(--egypt-black); background-color: #fff; padding: 10px 30px; position: relative;
         }
         .pharaonic-title::before, .pharaonic-title::after {
-            content: "★"; /* Simple star/sun symbol */
-            color: var(--egypt-gold);
-            font-size: 1.2em;
-            margin: 0 10px;
+            content: "★"; color: var(--egypt-gold); font-size: 1.2em; margin: 0 10px;
         }
     </style>
 </head>
 <body class="bg-amber-50 text-gray-900">
 
-    <!-- Control Panel (No Print) -->
+    <!-- Control Panel -->
     <div class="no-print fixed top-0 left-0 right-0 bg-white shadow-md z-50 p-4 flex justify-between items-center border-b-4 border-red-700">
         <div>
             <h2 class="text-lg kufi-font text-red-800 font-bold flex items-center gap-2">
-                <span>🇪🇬</span> لوحة التحكم (التصميم الفرعوني)
+                <span>🇪🇬</span> لوحة التحكم
             </h2>
-            <p class="text-sm text-gray-600">تم تثبيت أسماء المنسق والمدير.</p>
+            <p class="text-sm text-gray-600">تم دمج التعليقات والروابط الـ 15 بنجاح.</p>
         </div>
         <button onclick="window.print()" class="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-6 rounded shadow-lg transition transform hover:scale-105 cairo-font flex items-center gap-2 border-2 border-green-900">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -211,46 +148,43 @@
     <div class="h-24 no-print"></div>
 
     <!-- PAGE 1: The Formal Report -->
-    <div class="page hover-scale" style="display: block;">
-        <!-- Flag Strip -->
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         
-        <!-- Header Content -->
-        <div class="flex justify-between items-start mt-4 mb-8">
+        <div class="flex justify-between items-start mt-4 mb-6">
             <div class="flex flex-col items-start font-bold text-lg leading-relaxed text-black">
                 <div>مديرية التربية والتعليم بكفر الشيخ</div>
                 <div>إدارة شرق كفر الشيخ التعليمية</div>
                 <div>إدارة التخطيط الاستراتيجي والمشروعات</div>
-                <div class="flex gap-2 mt-2">
+                <div class="flex gap-2 mt-1">
                     <span class="text-red-700">مدرسة:</span>
                     <span contenteditable="true" class="border-b-2 border-dotted border-gray-400 min-w-[200px] text-black px-2 font-bold">الشهيد نجيب محي الشناوي للتعليم الأساسي بدقميرة</span>
                 </div>
             </div>
-            <!-- Eagle/Pyramid SVG Icon -->
             <div class="opacity-80">
                 <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 10L10 80H90L50 10Z" fill="#C09300" stroke="black" stroke-width="2"/> <!-- Pyramid -->
-                    <circle cx="50" cy="30" r="10" fill="#CE1126" opacity="0.8"/> <!-- Sun -->
-                    <path d="M20 80H80V85H20V80Z" fill="black"/> <!-- Base -->
+                    <path d="M50 10L10 80H90L50 10Z" fill="#C09300" stroke="black" stroke-width="2"/>
+                    <circle cx="50" cy="30" r="10" fill="#CE1126" opacity="0.8"/>
+                    <path d="M20 80H80V85H20V80Z" fill="black"/>
                 </svg>
             </div>
         </div>
 
-        <div class="text-center mb-10">
+        <div class="text-center mb-8">
             <h1 class="text-3xl kufi-font pharaonic-title inline-block rounded shadow-sm text-black">
                 تقرير مصور عن مبادرة مصر حضارة وانتماء
             </h1>
         </div>
 
-        <div class="mb-8 font-bold text-lg flex justify-between px-4 border-b-2 border-amber-400 pb-2">
+        <div class="mb-6 font-bold text-lg flex justify-between px-4 border-b-2 border-amber-400 pb-2">
             <span>السيد الفاضل مدير عام الإدارة</span>
             <span class="text-red-800">التخطيط الاستراتيجي</span>
         </div>
-        <div class="mb-6 font-bold text-lg px-4">
+        <div class="mb-4 font-bold text-lg px-4">
             بعد التحية،
         </div>
 
-        <div class="text-justify text-lg leading-9 mb-8 px-4 font-medium">
+        <div class="text-justify text-lg leading-8 mb-4 px-4 font-medium flex-grow">
             <p contenteditable="true">
                 إيماءً إلى توجيهات سيادتكم وتفعيلاً لمبادرة <span class="text-red-700 font-bold">"مصر حضارة وانتماء"</span>، والتي تهدف إلى غرس قيم الولاء والانتماء في نفوس الطلاب، وربطهم بجذورهم الحضارية العريقة، نتشرف بعرض تقرير عن الفعاليات التي تم تنفيذها بمدرستنا. لقد قمنا بوضع خطة تنفيذية شملت كافة الجوانب التربوية والثقافية، حيث بدأت الفعاليات ببرنامج إذاعي يومي يلقي الضوء على الشخصيات المصرية المؤثرة والمعالم التاريخية لمحافظة كفر الشيخ ومصر عامة. كما تم تنظيم سلسلة من الندوات والمحاضرات تحت عنوان "اعرف تاريخك" حاضر فيها معلمو الدراسات الاجتماعية لتعريف الطلاب بأهمية الحفاظ على الهوية المصرية.
                 <br><br>
@@ -260,21 +194,21 @@
             </p>
         </div>
 
-        <div class="flex justify-between items-end mt-auto pt-4 px-4 font-bold text-lg" style="margin-top: auto;">
+        <div class="flex justify-between items-end pb-4 px-4 font-bold text-lg mt-auto">
             <div class="text-center">
-                <p class="mb-8 text-gray-700">منسق التخطيط الاستراتيجي</p>
-                <p contenteditable="true" class="text-black text-xl font-kufi font-bold">مازن فوزي محمد بدوي</p>
+                <p class="mb-2 text-gray-700">منسق التخطيط الاستراتيجي</p>
+                <p contenteditable="true" class="text-black text-xl kufi-font border-b border-dotted border-gray-400 pb-1">مازن فوزي محمد بدوي</p>
             </div>
             
             <div class="text-center">
-                <p class="mb-8 text-gray-700">يعتمد،، مدير المدرسة</p>
-                <p contenteditable="true" class="text-black text-xl font-kufi font-bold">ا/ ابراهيم عبد المنعم هلال</p>
+                <p class="mb-2 text-gray-700">يعتمد،، مدير المدرسة</p>
+                <p contenteditable="true" class="text-black text-xl kufi-font border-b border-dotted border-gray-400 pb-1">ا/ ابراهيم عبد المنعم هلال</p>
             </div>
         </div>
     </div>
 
     <!-- PAGE 2 -->
-    <div class="page hover-scale page-flex">
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (1) <span class="text-gold-600">⚜</span>
@@ -283,30 +217,32 @@
         <!-- Activity 1 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 1)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2026/01/10</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">يوم رياضي (عمل جماعي)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تعزيزاً لقيم النشاط والعمل الجماعي التي تدعو لها مبادرة "مصر.. حضارة وانتماء"، نظمت المدرسة يوماً رياضياً مميزاً بإشراف الأستاذ رضا محمود أحمد.
+            </p>
             <div class="fb-embed-container">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid033RGTgSQgLkr616cMqz1uuvzwkZk2BAq3MQMBYmV1rJPNjrJ9djE34Vj27qRdWMofl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid033RGTgSQgLkr616cMqz1uuvzwkZk2BAq3MQMBYmV1rJPNjrJ9djE34Vj27qRdWMofl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
 
         <!-- Activity 2 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 2)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2026/01/08</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">ندوة صحية (الاكتشاف المبكر)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تحقيقاً لأهداف مبادرة "مصر.. حضارة وانتماء" في الحفاظ على الصحة العامة، أقيمت ندوة تثقيفية حول "الاكتشاف المبكر للأمراض" مع الزائرة الصحية أ. سماح عبدالفتاح.
+            </p>
             <div class="fb-embed-container">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0zQrrFEds1SVtUGZRF9D81TRYu7Dkic6aD94uVnYFJ6nsshiAyXMqkeoDhJzdsrHDl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0zQrrFEds1SVtUGZRF9D81TRYu7Dkic6aD94uVnYFJ6nsshiAyXMqkeoDhJzdsrHDl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </div>
 
     <!-- PAGE 3 -->
-    <div class="page hover-scale page-flex">
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (2) <span class="text-gold-600">⚜</span>
@@ -315,30 +251,32 @@
         <!-- Activity 3 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 3)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2026/01/05</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">رسالة توعوية (نبذ العنف)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                ترسيخاً للسلوك الحضاري ونبذ العنف تفعيلاً لمبادرة "مصر.. حضارة وانتماء"، قدم الطلاب رسالة توعوية للمجتمع بإشراف الأخصائيتين أ. سماح عبداللطيف وأ. إيمان سيد أحمد.
+            </p>
             <div class="fb-embed-container">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02xGgo6LxrBSmiXn2SBNSEnSBM12SpcVGrFqQuqY3a9zb4GyvwFqHMAs1jmpShzWnLl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02xGgo6LxrBSmiXn2SBNSEnSBM12SpcVGrFqQuqY3a9zb4GyvwFqHMAs1jmpShzWnLl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
 
         <!-- Activity 4 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 4)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2026/01/02</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">التربية الاجتماعية (القيم الأخلاقية)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                إيماناً بدور المدرسة في نشر القيم الأخلاقية ضمن مبادرة "مصر.. حضارة وانتماء"، أكد فريق التربية الاجتماعية على أهمية نبذ العنف والتحرش في المجتمع.
+            </p>
             <div class="fb-embed-container">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid033YoVfBr2ZaZR9PngSCkdJBH5WureNoT1h52CdNiLEtfSLCFXoiAEjmUseHgRv7uYl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02xGgo6LxrBSmiXn2SBNSEnSBM12SpcVGrFqQuqY3a9zb4GyvwFqHMAs1jmpShzWnLl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </div>
     
     <!-- PAGE 4 -->
-    <div class="page hover-scale page-flex">
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (3) <span class="text-gold-600">⚜</span>
@@ -347,36 +285,38 @@
         <!-- Activity 5 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 5)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/20</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">الحديقة المدرسية (الانتماء للأرض)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تعميقاً لقيم الانتماء للأرض والإنتاج ضمن مبادرة "مصر.. حضارة وانتماء"، قام الطلاب بتجهيز الحديقة المدرسية بإشراف م. فهمي عبدالحليم وأ. السعيد جاد.
+            </p>
             <div class="fb-embed-container">
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid033YoVfBr2ZaZR9PngSCkdJBH5WureNoT1h52CdNiLEtfSLCFXoiAEjmUseHgRv7uYl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </div>
+
+        <!-- Activity 6 (Reel) -->
+        <div class="activity-card">
+            <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">النشيد الوطني (الهوية الوطنية)</span></div>
+            </div>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تأكيداً على الهوية الوطنية والانتماء لمصر ضمن فعاليات مبادرة "مصر.. حضارة وانتماء"، استقبل طلاب 1/1 إعدادي لجنة الجودة بترديد النشيد الوطني بحماس.
+            </p>
+            <div class="fb-embed-container bg-amber-50">
                  <a href="https://www.facebook.com/share/r/1826dcj8bq/" target="_blank" class="text-red-700 underline font-bold text-xl hover:text-red-900 transition flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    اضغط هنا لفتح فيديو الريلز (Facebook Reel)
+                    اضغط للمشاهدة: النشيد الوطني (Facebook Reel)
                  </a>
-            </div>
-        </div>
-
-        <!-- Activity 6 (Link) -->
-        <div class="activity-card">
-            <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 6)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/15</span></div>
-            </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر...)</p>
-            <div class="fb-embed-container bg-amber-50">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02CU2JxiT2Rx8SCxhPKLPeC4BPgGS4S7czrNaisamaKLXew9ZQnauqAak87KffCrxBl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </div>
 
     <!-- PAGE 5 -->
-    <div class="page hover-scale page-flex">
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (4) <span class="text-gold-600">⚜</span>
@@ -385,30 +325,32 @@
         <!-- Activity 7 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 7)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/10</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">إذاعة متميزة (منارة العلم)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                إبرازاً للصورة المشرفة للمدرسة كمنارة للعلم ضمن مبادرة "مصر.. حضارة وانتماء"، قدم الطلاب إذاعة مميزة أمام لجنة الجودة بإشراف الأستاذة سارة إبراهيم.
+            </p>
             <div class="fb-embed-container">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02XWFF4ewBLRTDyGcWMKsfMo3y88oQor99oraFcvCgfmT3wSNGt3w6oYA59QRc6iQ7l%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02CU2JxiT2Rx8SCxhPKLPeC4BPgGS4S7czrNaisamaKLXew9ZQnauqAak87KffCrxBl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
 
         <!-- Activity 8 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 8)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/05</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">إبداع إذاعي (المرحلة الابتدائية)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                دعماً للمواهب الطلابية الواعدة التي تبني المستقبل ضمن مبادرة "مصر.. حضارة وانتماء"، تم تقديم إبداع إذاعي للمرحلة الابتدائية بإشراف الأستاذة إيمان سيد أحمد.
+            </p>
             <div class="fb-embed-container">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0CddkgY8FiguYr1zCu9xixixpf7CZKasjnPJqgQ3KS2UjjK8kx7ZVQmJzSsRW6aDGl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02XWFF4ewBLRTDyGcWMKsfMo3y88oQor99oraFcvCgfmT3wSNGt3w6oYA59QRc6iQ7l%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </div>
 
     <!-- PAGE 6 -->
-    <div class="page hover-scale page-flex">
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (5) <span class="text-gold-600">⚜</span>
@@ -417,68 +359,72 @@
         <!-- Activity 9 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 9)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/12/01</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">برنامج إذاعي (نشر الوعي)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تفعيلاً لدور الإذاعة المدرسية في نشر الوعي والثقافة ضمن مبادرة "مصر.. حضارة وانتماء"، قدم الطلاب برنامجاً إذاعياً متميزاً بإشراف الأستاذة ميادة أحمد سيد أحمد.
+            </p>
             <div class="fb-embed-container">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0WNPmGS697vfrwc5NzsMW5j7YcqcNP7Gord8EAnVhPT83Pfvc5WophtiFaCE44cpcl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0CddkgY8FiguYr1zCu9xixixpf7CZKasjnPJqgQ3KS2UjjK8kx7ZVQmJzSsRW6aDGl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
 
         <!-- Activity 10 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 10)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/11/25</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">الانضباط المؤسسي (زيارة المتابعة)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تعزيزاً للانضباط المؤسسي وجودة التعليم ضمن أهداف مبادرة "مصر.. حضارة وانتماء"، أشادت لجنة متابعة المديرية بانتظام سير العمل بالمدرسة أثناء زيارتهم.
+            </p>
             <div class="fb-embed-container">
-                 <a href="https://www.facebook.com/share/v/1ASrj8Uyc7/" target="_blank" class="text-red-700 underline font-bold text-xl hover:text-red-900 transition flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    اضغط هنا لفتح الفيديو (Facebook Video)
-                 </a>
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0WNPmGS697vfrwc5NzsMW5j7YcqcNP7Gord8EAnVhPT83Pfvc5WophtiFaCE44cpcl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </div>
 
     <!-- PAGE 7 -->
-    <div class="page hover-scale page-flex">
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (6) <span class="text-gold-600">⚜</span>
         </h3>
 
-        <!-- Activity 11 (Link) -->
+        <!-- Activity 11 (Video) -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 11)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/11/20</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">دوري المكاتب التنفيذية (المركز 3)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تنميةً للمهارات القيادية والمشاركة الفعالة ضمن مبادرة "مصر.. حضارة وانتماء"، فازت المدرسة بالمركز الثالث في دوري المكاتب التنفيذية بإدارة شرق كفر الشيخ.
+            </p>
             <div class="fb-embed-container bg-amber-50">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02S1Tkf4s3Rgzs96HwrEUZ8KajFn8T3aoSQMwrsixZ4sPbtcmJRb64BgkeeHPKhbQql%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                 <a href="https://www.facebook.com/share/v/1ASrj8Uyc7/" target="_blank" class="text-red-700 underline font-bold text-xl hover:text-red-900 transition flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    اضغط للمشاهدة: فوز المكاتب التنفيذية (Facebook Video)
+                 </a>
             </div>
         </div>
 
         <!-- Activity 12 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 12)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/11/15</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">أعمال التطوير (بيئة متحضرة)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                توفيراً لبيئة تعليمية متحضرة تليق بأبنائنا ضمن مبادرة "مصر.. حضارة وانتماء"، نوثق أعمال التطوير والإنجازات التي تمت بالمدرسة بجهود المخلصين.
+            </p>
             <div class="fb-embed-container">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02ch1bJoUW4mutgKBv5KoNsgdqMKFYiwqbc9FpftHRE1yVE1DHWaEwVo7z9XRA5NtLl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02S1Tkf4s3Rgzs96HwrEUZ8KajFn8T3aoSQMwrsixZ4sPbtcmJRb64BgkeeHPKhbQql%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </div>
 
     <!-- PAGE 8 -->
-    <div class="page hover-scale page-flex">
+    <div class="page hover-scale">
         <div class="flag-strip"></div>
         <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
             <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (7) <span class="text-gold-600">⚜</span>
@@ -487,24 +433,54 @@
         <!-- Activity 13 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 13)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/11/10</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">ندوة التنمر الإلكتروني (وعي رقمي)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                حمايةً للطلاب من المخاطر التكنولوجية ونشر الوعي الرقمي ضمن مبادرة "مصر.. حضارة وانتماء"، عقدت ندوة عن "التنمر الإلكتروني" حاضر فيها د. مازن فوزي بدوي.
+            </p>
             <div class="fb-embed-container">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02LNhsJghMk4T5UR8vXfiR391oyKtWdJ1Sr1DbmTjoXwjtmRKFfs3Z2fkT8BxaHLz3l%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02ch1bJoUW4mutgKBv5KoNsgdqMKFYiwqbc9FpftHRE1yVE1DHWaEwVo7z9XRA5NtLl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
 
         <!-- Activity 14 -->
         <div class="activity-card">
             <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
-                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 bg-yellow-100 px-2">(اضغط لكتابة اسم الفعالية 14)</span></div>
-                <div class="flex gap-2">التاريخ: <span contenteditable="true" class="text-black">2025/11/05</span></div>
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">دوري المكاتب (المركز الأول)</span></div>
             </div>
-            <p class="text-sm text-gray-600 mb-1 bg-yellow-50 p-1" contenteditable="true">(اضغط هنا لكتابة وصف مختصر لهذه الفعالية...)</p>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تتويجاً للتميز والريادة في الأنشطة التربوية ضمن مبادرة "مصر.. حضارة وانتماء"، حصدت المدرسة المركز الأول في دوري مكاتب التربية الاجتماعية على مستوى الإدارة.
+            </p>
             <div class="fb-embed-container">
-                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02sWAdqByVYjqKLQcbjsX6SrWqMXq7BSPzutCQUreauEyRLaDmmEbbCmLJNzhRzetFl%26id%3D100057578015952&show_text=true&width=500" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02LNhsJghMk4T5UR8vXfiR391oyKtWdJ1Sr1DbmTjoXwjtmRKFfs3Z2fkT8BxaHLz3l%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 9 -->
+    <div class="page hover-scale">
+        <div class="flag-strip"></div>
+        <h3 class="text-center kufi-font text-2xl mb-4 mt-6 border-b-2 border-black pb-2 mx-20 text-red-800">
+            <span class="text-gold-600">⚜</span> توثيق فعاليات المبادرة (8) <span class="text-gold-600">⚜</span>
+        </h3>
+
+        <!-- Activity 15 -->
+        <div class="activity-card">
+            <div class="flex justify-between font-bold mb-1 text-lg border-b-2 border-amber-200 pb-1">
+                <div class="flex gap-2">اسم الفعالية: <span contenteditable="true" class="text-red-800 font-bold">الإذاعة المدرسية (المرحلة الإعدادية)</span></div>
+            </div>
+            <p class="text-sm text-black font-bold mb-1 bg-yellow-50 p-2 border border-yellow-200 rounded" contenteditable="true">
+                تشجيعاً للإبداع الطلابي والتعبير عن الذات ضمن مبادرة "مصر.. حضارة وانتماء"، تألق طلاب المرحلة الإعدادية في الإذاعة المدرسية بإشراف الأستاذة سماح عبداللطيف.
+            </p>
+            <div class="fb-embed-container">
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02sWAdqByVYjqKLQcbjsX6SrWqMXq7BSPzutCQUreauEyRLaDmmEbbCmLJNzhRzetFl%26id%3D100057578015952&show_text=true&width=750" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </div>
+
+        <!-- Activity 16 (Empty Extra) -->
+        <div class="activity-card bg-amber-50 border-dashed border-2 border-amber-300">
+            <div class="flex justify-center items-center h-full text-amber-600 font-bold kufi-font">
+                (مساحة فارغة لفعالية إضافية)
             </div>
         </div>
     </div>
